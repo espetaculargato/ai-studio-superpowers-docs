@@ -1,4 +1,11 @@
 [
-  { "title": "Introdução", "icon": "menu_book", "path": "pages/intro.md" },
-  { "title": "Sincronização Nuvem", "icon": "cloud_sync", "path": "pages/sync.md" }
+  { "title": "Visão Geral & Interface", "icon": "space_dashboard", "path": "pages/01-visao-geral.md" },
+  { "title": "Criando e Injetando Prompts", "icon": "code_blocks", "path": "pages/02-gerenciamento-prompts.md" },
+  { "title": "Histórico & Evals (5 Estrelas)", "icon": "history", "path": "pages/03-historico-evals.md" },
+  { "title": "Anotações e Fragmentos", "icon": "sticky_note_2", "path": "pages/04-anotacoes.md" },
+  { "title": "Workspaces (Isolamento)", "icon": "domain", "path": "pages/05-workspaces.md" },
+  { "title": "Etiquetas (Tags) e Filtros", "icon": "label", "path": "pages/06-tags-filtros.md" },
+  { "title": "Exportador de Conversas", "icon": "export_notes", "path": "pages/07-exportador.md" },
+  { "title": "Sincronização com GitHub", "icon": "cloud_sync", "path": "pages/08-sincronizacao.md" },
+  { "title": "Compartilhamento (Código AISP)", "icon": "share", "path": "pages/09-codigo-galeria.md" }
 ]
