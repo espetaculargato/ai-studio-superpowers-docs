@@ -1,0 +1,4 @@
+[
+  { "title": "Introdução", "icon": "menu_book", "path": "pages/intro.md" },
+  { "title": "Sincronização Nuvem", "icon": "cloud_sync", "path": "pages/sync.md" }
+]
