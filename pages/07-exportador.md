@@ -14,10 +14,10 @@ Após ler este guia, você será capaz de:
 A extensão intercepta o tráfego de rede da API do Google para gerar documentos Markdown íntegros.
 
 Para exportar o chat atual:
-1. Clique no ícone de **Exportação** localizado no canto superior direito da tela do AI Studio (ou no ícone da extensão no Chrome).
+1. Clique no ícone de **Exportação** localizado no canto superior direito da tela do AI Studio.
 2. Selecione a ação desejada:
    * **Copiar Sessão:** Envia o texto para a sua área de transferência.
-   * **Baixar Sessão:** Salva o arquivo localmente com a extensão `.txt`.
+   * **Baixar Sessão:** Salva o arquivo localmente com a extensão `.txt`. (DESATIVADO)
 
 ---
 

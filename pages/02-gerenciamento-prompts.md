@@ -28,7 +28,7 @@ Você pode transferir o conteúdo salvo na extensão diretamente para os campos 
 ### Substituir as Instruções do Sistema
 Para preencher o painel principal de comportamento do modelo:
 1. Localize o prompt desejado na Galeria.
-2. Clique com o botão direito sobre o card e selecione **Inserir nas Instruções**. (Você também encontra este botão dentro da tela de edição).
+2. Clique com o botão direito sobre o card e selecione **Inserir nas Instruções**. (Na aba prompts essa ação pode ser feita apenas clicando no card).
 3. Se o campo nativo do Google já possuir texto, confirme a substituição na caixa de diálogo. A extensão injetará o texto e atualizará o estado da página automaticamente.
 
 ### Inserir na mensagem (Chat)
