@@ -1,50 +1,61 @@
-# 🚀 Visão Geral & Interface
+# Visão Geral e Interface
 
-Bem-vindo ao **AI Studio Superpowers**. Esta extensão foi projetada para transformar o Google AI Studio em uma verdadeira IDE (Ambiente de Desenvolvimento Integrado) para Engenharia de Prompts. 
+Este documento descreve a interface e as funcionalidades básicas da extensão AI Studio Superpowers. 
 
-Nossa arquitetura foi construída para se camuflar perfeitamente à interface nativa do Google, respeitando os temas Claro e Escuro automaticamente, sem causar lentidão ou consumir memória excessiva.
+Após ler este guia, você será capaz de:
+* Localizar os painéis da extensão dentro do Google AI Studio.
+* Navegar entre Prompts e Anotações.
+* Alterar o layout de visualização.
+* Reordenar seus itens salvos.
 
----
-
-## 📍 Onde encontrar as ferramentas?
-
-Após instalar a extensão, você não precisa abrir popups externos complexos. A extensão injeta seus controles de forma cirúrgica diretamente na interface do AI Studio:
-
-1. **Botão de Galeria (Hub Principal):** 
-   Localizado logo abaixo do painel de **Instruções do Sistema** (System Instructions). Clicar neste botão abrirá o seu banco de dados central de Prompts e Notas.
-   
-   *![Localização do Botão Galeria](../images/print-botao-galeria.png)* <!-- Dica: Salve um print com este nome na pasta images/ do seu Github -->
-
-2. **Botão de Exportação de Chat:** 
-   Localizado no canto superior direito do painel de Chat, ao lado dos botões nativos de configurações de execução do modelo.
+Este documento não aborda a criação de prompts ou configurações de nuvem. Para esses tópicos, consulte as seções específicas no menu lateral.
 
 ---
 
-## 🖼️ O Hub Principal (A Galeria)
+## Localizar as ferramentas
 
-Ao clicar no botão "Galeria", você entra na interface principal da extensão. Este painel flutuante (Modal) foi desenhado para ser sua "Sala de Controle".
+A extensão adiciona dois controles principais à interface nativa do Google AI Studio:
 
-### Elementos da Interface
-* **Barra Superior (Toolbar):** Contém a barra de pesquisa em tempo real e os atalhos rápidos das suas Etiquetas (Tags).
-* **Navegação (Abas):** Alterne rapidamente entre seus **Prompts** (textos estruturados) e **Anotações** (fragmentos e rascunhos).
-* **Botões Flutuantes (FAB):** No canto inferior direito, você encontrará os botões para **Criar Novo** (`+`) ou **Importar** o texto que já está digitado atualmente no AI Studio.
-* **Rodapé de Sistema:** Onde você gerencia seus [Workspaces](./05-workspaces.md) (Projetos isolados) e a [Sincronização com a Nuvem](./08-sincronizacao.md).
+1.  **Botão Galeria:** Localizado abaixo do painel de *System Instructions* (Instruções do Sistema). Clique neste botão para abrir seu banco de dados de prompts.
+    
+    <img src="../images/print-botao-galeria.png" width="300" alt="Botão Galeria destacado na interface">
 
----
-
-## 🎛️ Controle de Layout e Ordenação
-
-Seu banco de dados se adapta à sua necessidade de foco. No canto superior direito da tela principal, você encontrará o seletor de **Layouts**:
-
-* 🔲 **Galeria:** Modo padrão (Cards grandes). Ideal para visualizar títulos e descrições longas. Suporta coloração dinâmica caso você use Emojis nos títulos.
-* ⏹️ **Compacto:** Reduz o preenchimento (padding) dos cards, permitindo visualizar mais prompts na mesma tela.
-* 📄 **Lista:** Oculta as descrições e transforma a interface em uma tabela super enxuta. Excelente para Workspaces com dezenas de prompts.
-
-### Arrastar e Soltar (Drag & Drop)
-A ordem dos seus prompts e anotações é totalmente personalizável. Basta **clicar, segurar e arrastar** qualquer card para reorganizar sua área de trabalho. Uma linha guia azul (indicador visual) mostrará exatamente onde o item será solto. 
-
-A nova ordem é salva automaticamente no seu HD instantaneamente.
+2.  **Botão Exportar Conversa:** Localizado no canto superior direito do painel de chat. Clique neste botão para baixar ou copiar o histórico da conversa atual.
 
 ---
 
-> **Próximo Passo:** Aprenda a criar, editar e injetar seu primeiro prompt lendo a sessão [Criando e Injetando Prompts](./02-gerenciamento-prompts.md).
+## Navegar na Galeria
+
+A Galeria é o painel central da extensão. Ela contém os seguintes elementos principais:
+
+*   **Barra de Ferramentas (Superior):** Fornece um campo de busca textual e uma barra de filtros por Etiquetas (Tags).
+*   **Abas de Visualização:** Permitem alternar entre os seus **Prompts** e as suas **Anotações**.
+*   **Botões de Ação (Canto inferior direito):** Fornecem as opções para criar um novo documento (`+`) ou importar o texto atual da tela do AI Studio.
+*   **Rodapé:** Fornece menus para gerenciar seus Workspaces e configurar a sincronização com o GitHub.
+
+---
+
+## Alterar o layout da Galeria
+
+Você pode alterar a forma como a Galeria exibe seus dados. 
+
+Para alterar o layout, siga estes passos:
+1. Abra a Galeria.
+2. Clique no menu de layouts, localizado no canto superior direito do painel.
+3. Selecione uma das seguintes opções:
+   * **Galeria:** Exibe cards grandes. Recomendado para visualizar descrições detalhadas.
+   * **Compacto:** Reduz o espaçamento dos cards. Recomendado para visualizar mais itens simultaneamente.
+   * **Lista:** Oculta as descrições e exibe os dados em formato de tabela de linha única. Recomendado para workspaces com alto volume de itens.
+
+---
+
+## Reordenar itens
+
+Você pode organizar a ordem dos seus prompts, anotações e workspaces.
+
+Para alterar a posição de um item:
+1. Clique e segure o cursor sobre o card ou item da lista.
+2. Arraste o item para a nova posição. (Uma linha azul indica o local de destino).
+3. Solte o botão do mouse.
+
+A extensão salva a nova ordem localmente de forma automática.
