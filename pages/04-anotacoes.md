@@ -1,43 +1,42 @@
-# 📌 Anotações e Fragmentos
+# Gerenciar Anotações
 
-Nem todo texto salvo é um prompt estruturado. Às vezes, você precisa guardar um bloco de código, uma lista de requisitos, um link de referência ou um rascunho rápido. Para isso, o **AI Studio Superpowers** oferece o módulo de **Anotações**.
+Este documento descreve como utilizar o módulo de Anotações para armazenar fragmentos de texto e contexto auxiliar.
 
----
-
-## 💡 Notas vs. Prompts: Quando usar cada um?
-
-Embora a interface de criação seja similar, o propósito e a integração são diferentes:
-
-*   **Prompts:** São destinados às **Instruções do Sistema**. Eles possuem histórico de versões, evals de estrelas e sobrescrevem o campo de configuração da IA.
-*   **Anotações:** São destinadas ao **Corpo da Mensagem (Chat)**. Elas são fragmentos que você "cola" na sua conversa com a IA para fornecer contexto ou exemplos. Também podem ser usados apenas para fazer e salvar anotações.
+Após ler este guia, você será capaz de:
+* Distinguir Anotações de Prompts.
+* Inserir anotações no fluxo do chat.
+* Organizar e criar notas.
 
 ---
 
-## ⌨️ Injeção Inteligente no Chat
+## Comparar Prompts e Anotações
 
-Diferente dos Prompts (que substituem todo o conteúdo), as Notas utilizam um sistema de **Injeção via Cursor**:
+Embora compartilhem a mesma interface de criação, Prompts e Anotações possuem propósitos distintos:
 
-1.  Abra a Galeria e vá na aba **Anotações**.
-2.  No card da nota desejada, clique no botão **Inserir no Chat**.
-3.  **Onde o texto vai parar?** A extensão identifica a posição exata do seu cursor (caret) dentro da caixa de chat do Google AI Studio e insere a nota naquele ponto específico. 
-
----
-
-## 🎨 Organização Visual
-
-As anotações são visualmente distintas na Galeria para evitar confusão:
-*   Utilizam o ícone de **Nota Adesiva** (`sticky_note_2`).
-*   A cor de destaque padrão é sutil para não cansar a vista durante leituras longas.
-*   Assim como os prompts, as notas suportam o sistema de **Etiquetas (Tags)**, permitindo filtrar, por exemplo, apenas notas de "Documentação" ou "Snippets de Código".
+| Característica | Prompts | Anotações |
+| :--- | :--- | :--- |
+| **Objetivo** | Configurar o comportamento principal da IA. | Armazenar contexto, links, código ou rascunhos. |
+| **Destino de Injeção** | Painel de *System Instructions*. | Caixa de entrada de mensagens do *Chat*. |
+| **Versionamento** | Mantém histórico de 20 versões e suporte a *Evals*. | Não possui histórico de versões. |
 
 ---
 
-## 📝 Editor de Notas
+## Inserir anotações na mensagem
 
-O editor de notas é otimizado para escrita fluida:
-*   **Título Opcional:** Se você não der um título, a extensão salvará automaticamente como *"Sem Título"*.
-*   **Monaco Editor:** O suporte a Markdown e realce de sintaxe de código também está presente aqui, tornando as notas o lugar perfeito para guardar bibliotecas de funções que você costuma enviar para a IA analisar.
+As anotações utilizam injeção baseada em cursor, permitindo concatenar múltiplos fragmentos em uma única mensagem.
+
+Para injetar uma nota:
+1. Clique na caixa de chat do AI Studio e posicione o cursor de texto no local exato onde deseja inserir o fragmento.
+2. Abra a Galeria e selecione a aba **Anotações**.
+3. Clique no botão **Inserir na Mensagem** no card da anotação desejada.
 
 ---
 
-> **Dica Pro:** Mantenha suas anotações organizadas por projetos usando os **Workspaces**. Saiba como separar seus contextos em [Workspaces (Isolamento)](./05-workspaces.md).
+## Criar e importar anotações
+
+O editor de anotações possui os mesmos recursos de formatação (Monaco Editor) presentes nos prompts. O título é opcional; se você deixar em branco, a extensão salvará o item como *"Sem Título"*.
+
+Para extrair um texto da tela e transformá-lo em nota:
+1. Acesse a aba **Anotações** na Galeria.
+2. Clique no botão **Importar do Chat**.
+3. A extensão prioriza a captura do texto atualmente digitado na caixa de entrada do usuário. O editor abrirá com o conteúdo pronto para salvamento.

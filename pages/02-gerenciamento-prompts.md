@@ -1,58 +1,58 @@
-# 🏗️ Criando e Injetando Prompts
+# Gerenciar Prompts
 
-O gerenciamento de prompts é a funcionalidade central do **AI Studio Superpowers**. Nossa interface substitui campos de texto simples por um ambiente de edição de nível profissional, integrado ao fluxo de trabalho nativo.
+Este documento descreve como criar, editar e inserir prompts no Google AI Studio. 
 
----
-
-## 🛠️ O Painel de Edição
-
-Ao criar um novo prompt ou editar um existente, você terá acesso a três áreas fundamentais:
-
-1. **Cabeçalho de Identificação:** Onde você define o título do seu prompt. 
-   * **Dica Visual:** Se você iniciar o título com um **Emoji** (ex: `🐍 Script Python`), a extensão detectará a cor dominante do emoji e colorirá o card na galeria automaticamente para facilitar a identificação visual.
-
-2. **Sistema Inline de Etiquetas (Tags):** 
-   Localizado logo abaixo do título, este campo permite categorizar seus prompts. 
-   * Ao digitar uma nova tag, a extensão sugere etiquetas já existentes no seu banco de dados para evitar duplicatas.
-   * Pressione `Enter` ou `,` para confirmar uma tag.
-
-3. **Área de Conteúdo (Monaco Editor):**
-   Utilizamos o **Monaco Editor** (o motor que alimenta o VS Code). Isso garante:
-   * **Syntax Highlighting:** Coloração de código para Markdown e linguagens de programação.
-   * **Numeração de Linhas:** Essencial para prompts extensos e complexos.
+Após ler este guia, você será capaz de:
+* Criar e formatar um prompt no Monaco Editor.
+* Inserir prompts nas Instruções do Sistema ou no Chat.
+* Executar ações rápidas através do menu de contexto.
+* Importar textos da interface para a extensão.
 
 ---
 
-## 🚀 O Poder da Injeção Direta
+## Editar um prompt
 
-A principal vantagem desta extensão é a capacidade de "teleportar" seu prompt salvo diretamente para os campos do Google AI Studio com um único clique.
+A tela de edição substitui os campos de texto padrão por um ambiente estruturado. Para editar um prompt:
 
-### Inserir nas Instruções do Sistema
-Dentro do editor ou no menu de contexto do card, você encontrará o botão **"Inserir nas Instruções"**. 
-* **Fluxo de Segurança:** Se o campo de Instruções do Sistema no Google já estiver preenchido, a extensão exibirá um diálogo de confirmação para evitar que você apague seu trabalho atual por acidente.
-
-### Inserir no Chat
-Para fragmentos de prompts ou exemplos de poucas linhas, você pode usar a opção de inserir (Menu de Contexto) diretamente na caixa de mensagem ativa . O texto será inserido exatamente na posição onde o seu cursor (caret) estiver piscando.
+1. Clique no botão **Criar Novo** (`+`) na Galeria, ou clique no ícone de edição em um card existente.
+2. Defina o **Título**. Se você iniciar o título com um emoji, a extensão usará a cor desse emoji para destacar o card na Galeria.
+3. Adicione **Etiquetas (Tags)** para categorizar o prompt.
+4. Escreva o texto na **Área de Conteúdo**. Esta área utiliza o Monaco Editor, que fornece numeração de linhas e realce de sintaxe (Syntax Highlighting) para Markdown e linguagens de programação.
 
 ---
 
-## 🖱️ Ações Rápidas (Menu de Contexto)
+## Inserir prompts no AI Studio
 
-Você pode realizar operações avançadas sem sequer abrir o editor de prompts. Clique com o **botão direito do mouse** sobre qualquer card na galeria para acessar:
+Você pode transferir o conteúdo salvo na extensão diretamente para os campos do Google AI Studio.
 
-* **Duplicar:** Cria um clone exato do prompt selecionado (incluindo tags e conteúdo), mas reseta o histórico de versões. Útil para criar variações de um mesmo "Prompt Base".
-* **Copiar Conteúdo:** Copia o texto bruto para sua área de transferência (Clipboard).
-* **Excluir:** Remove permanentemente o item do Workspace atual.
+### Substituir as Instruções do Sistema
+Para preencher o painel principal de comportamento do modelo:
+1. Localize o prompt desejado na Galeria.
+2. Clique com o botão direito sobre o card e selecione **Inserir nas Instruções**. (Você também encontra este botão dentro da tela de edição).
+3. Se o campo nativo do Google já possuir texto, confirme a substituição na caixa de diálogo. A extensão injetará o texto e atualizará o estado da página automaticamente.
+
+### Inserir na mensagem (Chat)
+Para adicionar fragmentos menores à conversa ativa:
+1. Localize o prompt na Galeria.
+2. Clique com o botão direito sobre o card e selecione **Inserir na Mensagem**. 
+A extensão insere o texto exatamente na posição atual do seu cursor.
 
 ---
 
-## 📥 Importando do AI Studio
+## Executar ações rápidas
 
-Se você acabou de escrever um prompt excelente diretamente na interface do Google e deseja salvá-lo na sua galeria:
+Utilize o menu de contexto para gerenciar seus cards sem abrir a tela de edição. Clique com o **botão direito** sobre qualquer card para acessar as seguintes opções:
+
+*   **Editar:** Abre o painel completo de modificação.
+*   **Duplicar:** Cria uma cópia exata do prompt e de suas etiquetas, mas descarta o histórico de versões.
+*   **Copiar Conteúdo:** Copia o texto bruto para a área de transferência.
+*   **Excluir:** Remove o item do Workspace de forma permanente.
+
+---
+
+## Importar texto do AI Studio
+
+Para salvar um texto que você acabou de digitar na interface nativa do Google:
 1. Abra a Galeria.
-2. No canto inferior direito, ao lado do botão de (+), clique no botão **Importar do Chat**.
-3. A extensão capturará automaticamente o texto que está nas "Instruções do Sistema" e abrirá o editor com o conteúdo já preenchido para você dar um título e salvar.
-
----
-
-> **Acompanhamento de Mudanças:** Toda vez que você edita e salva um prompt, a extensão cria uma "foto" do estado anterior. Saiba mais em [Histórico & Evals](./03-historico-evals.md).
+2. Clique no botão **Importar do Chat** (ícone de atalho), localizado no canto inferior direito.
+3. A extensão captura o texto atual das Instruções do Sistema e abre o editor para que você defina um título e o salve.

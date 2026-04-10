@@ -1,57 +1,57 @@
-# 🕒 Histórico & Evals (5 Estrelas)
+# Versionamento e Avaliação (Evals)
 
-O **AI Studio Superpowers** trata seus prompts como código. Por isso, incluímos um sistema de versionamento automático que permite experimentar sem medo, sabendo que você pode voltar no tempo a qualquer momento.
+Este documento explica como a extensão gerencia o histórico de alterações dos seus prompts.
 
----
-
-## 🎞️ A Timeline de Versões
-
-Dentro do Editor de Prompts, a aba **Histórico** exibe uma linha do tempo vertical com todas as iterações do seu prompt.
-
-### Como as versões são criadas?
-* **Automático:** Sempre que você edita um prompt e clica em "Salvar", a extensão verifica se houve mudança no texto. Se sim, a versão anterior é movida para o histórico antes de ser substituída.
-* **Limite de Segurança:** Para preservar o desempenho e o espaço de armazenamento, mantemos as últimas **20 revisões** de cada prompt.
-
-### Anatomia de um Item na Timeline
-Cada registro no histórico contém:
-* **Identificador de Versão (v1, v2...):** Numeradas da mais antiga para a mais recente.
-* **Carimbo de Data e Hora:** Exatamente quando aquela alteração foi salva.
-* **Badges Especiais:** Marcadores que indicam se aquela versão foi um "Backup Automático" (gerado pelo sistema antes de uma restauração).
+Após ler este guia, você será capaz de:
+* Visualizar as iterações de um prompt.
+* Adicionar notas de alteração (Commit messages).
+* Avaliar a qualidade de uma versão.
+* Restaurar versões anteriores.
 
 ---
 
-## 📝 Notas de Versão (Commit Messages)
+## Visualizar o histórico de versões
 
-Ao lado de cada versão no histórico, você verá um campo de texto (ou uma mensagem como *"Sem descrição"*). 
+A extensão salva automaticamente o estado anterior de um prompt sempre que você modifica o texto e clica em **Salvar**.
 
-Ao clicar nessa mensagem, você pode digitar uma **nota explicativa** sobre o que mudou (ex: *"Ajustei o tom para ser mais formal"* ou *"Removi a restrição de caracteres"*). Isso é fundamental para fluxos de trabalho em equipe ou projetos de longa duração.
-
----
-
-## ⭐ Sistema de Evals (Avaliação de Qualidade)
-
-Abaixo de cada versão, você encontrará o seletor de **5 Estrelas**. Este não é apenas um adorno visual, mas uma ferramenta de **Benchmarking**:
-
-1. **Teste seu Prompt:** Execute o prompt no AI Studio.
-2. **Avalie a Resposta:** Se a resposta do modelo foi perfeita, marque 5 estrelas na versão atual. Se foi ruim, marque apenas 1 ou 2.
-3. **Identifique a Melhor Versão:** Versões marcadas com **5 estrelas** ganham um brilho dourado especial na timeline e no ícone de versão, facilitando identificar visualmente qual configuração de prompt gerou o melhor resultado histórico.
+Para visualizar o histórico:
+1. Abra um prompt no modo de edição.
+2. Clique na aba **Histórico**.
+3. A tela exibe uma linha do tempo vertical contendo até as últimas 20 revisões salvas. Cada item lista o número da versão e o horário exato da modificação.
 
 ---
 
-## ⏪ Restaurando o Passado
+## Adicionar notas de alteração
 
-Deseja voltar para uma configuração que funcionava melhor?
+Você pode documentar o motivo de cada alteração para facilitar o rastreamento em projetos longos.
 
-1. Localize a versão desejada na timeline.
+Para adicionar uma nota:
+1. Na aba Histórico, localize a versão desejada.
+2. Clique no texto de descrição (ex: *"Sem descrição"*).
+3. Digite a explicação (ex: *"Aumentei a formalidade do tom"*).
+4. Pressione <kbd>Enter</kbd> ou clique no botão de confirmar para salvar.
+
+---
+
+## Avaliar a qualidade (Evals)
+
+Utilize o seletor de 5 estrelas para registrar o desempenho de uma versão específica do prompt.
+
+1. Teste o prompt no AI Studio.
+2. Volte à aba Histórico do prompt correspondente.
+3. Clique na quantidade de estrelas que representa a qualidade da resposta gerada pelo modelo (1 para ruim, 5 para excelente).
+
+> 💡 **Nota:** Versões marcadas com 5 estrelas recebem um destaque visual amarelo na linha do tempo para identificação rápida.
+
+---
+
+## Restaurar uma versão anterior
+
+Se uma alteração recente prejudicar os resultados do modelo, você pode reverter o texto para uma versão anterior.
+
+Para restaurar um prompt:
+1. Na aba Histórico, localize a versão que deseja recuperar.
 2. Clique no botão **Restaurar**.
-3. **Protocolo "Safety First":** A extensão salvará automaticamente o seu rascunho atual como um **Backup de Segurança** e, em seguida, substituirá o editor pelo conteúdo da versão escolhida.
+3. Confirme a ação na caixa de diálogo.
 
----
-
-## 🛡️ Backups Automáticos
-
-A extensão é vigilante. Se você clicar em "Restaurar" ou realizar uma operação que substitua o conteúdo do editor, o ícone de **Nuvem com Seta** (`settings_backup_restore`) aparecerá no histórico. Isso indica que aquele item foi salvo pelo sistema para garantir que você não perca seu progresso caso mude de ideia após uma restauração.
-
----
-
-> **Organização Pro:** Você pode usar etiquetas para separar versões de testes. Aprenda a gerenciar sua biblioteca em [Etiquetas (Tags) e Filtros](./06-tags-filtros.md).
+A extensão substitui o texto atual no editor pelo texto da versão escolhida. Simultaneamente, a extensão cria um **Backup Automático** (marcado com um ícone azul) do texto que você acabou de substituir, garantindo que nenhum dado seja perdido.

@@ -1,56 +1,42 @@
-# 🤝 Compartilhamento (Código AISP)
+# Compartilhar Configurações (AISP)
 
-Trabalhar em equipe exige que todos tenham acesso à mesma biblioteca de prompts. O método tradicional (enviar o Gist ID e seu Token Privado do GitHub pelo Slack ou WhatsApp) é demorado e expõe sua chave de forma explícita.
+Este documento descreve como gerar e importar códigos ofuscados para compartilhar o acesso à nuvem com sua equipe.
 
-Para resolver isso, o **AI Studio Superpowers** possui um gerador de **Códigos de Galeria (AISP)** integrado.
-
----
-
-## 🔐 O que é um Código AISP?
-
-É uma string (texto) que encapsula o seu Gist ID e o Token do GitHub usando uma criptografia simples (Cifra XOR + Base64). 
-
-Embora **não seja de nível militar**, ele cumpre um papel fundamental de **ofuscação**: impede que leitores automáticos (scrapers) ou olhos curiosos leiam sua chave imediatamente ao olhar para o chat da empresa.
-
-*Exemplo de um Código AISP gerado:*
-`AISP::Tz1zMjB3eD46RDA3NDg1bHAwYzY...`
+Após ler este guia, você será capaz de:
+* Entender a função do código AISP.
+* Gerar um código a partir de credenciais existentes.
+* Importar um código para conectar-se a uma equipe.
 
 ---
 
-## 📤 Como Gerar e Compartilhar
+## O que é um Código AISP
 
-Se você já configurou as suas credenciais no Workspace e quer enviar o acesso para um colega:
+O código de Galeria (AISP) é uma string de texto que condensa o Gist ID e o Token do GitHub. 
+A extensão aplica uma ofuscação (Base64) neste código para evitar que rastreadores automáticos capturem suas credenciais quando o texto é enviado via aplicativos de mensagens corporativas.
 
-1. Na Galeria da sua extensão, clique em **Configurações** no rodapé.
-2. Certifique-se de que os campos Gist ID e Token estão preenchidos na aba "GitHub Tradicional".
-3. Clique no botão inferior **"Criar código de Galeria"** (Ícone: `content_copy`).
-4. O botão mudará rapidamente para "Check" (Verde), indicando que o código mascarado foi copiado para sua área de transferência.
-5. Cole esse código no Slack, Discord ou E-mail e envie para a sua equipe.
-
-> ⚠️ **Nota de Segurança:** Qualquer pessoa com a extensão instalada e com esse código poderá ler e sobrescrever os dados no Gist vinculado. Compartilhe **apenas com pessoas de confiança**.
+> ⚠️ **Atenção:** Esta ofuscação não é uma criptografia avançada. Compartilhe os códigos apenas com membros confiáveis da sua equipe. Quem possuir o código poderá modificar os arquivos do repositório no GitHub.
 
 ---
 
-## 📥 Como Importar (Vincular-se a uma Equipe)
+## Gerar um código de compartilhamento
 
-Se alguém te enviou um código `AISP::`, seguir estas etapas conectará o seu computador ao Workspace compartilhado em segundos:
+Para exportar o acesso do seu Workspace atual:
 
-1. Abra a Galeria e crie um **Novo Workspace** (ex: "Prompts do Projeto X").
-2. No rodapé, clique no ícone de **Configurações**.
-3. Na parte superior do modal de configurações, troque para a aba **Código de Galeria**.
-4. Cole o código completo (incluindo o prefixo `AISP::`) na caixa de texto.
+1. Certifique-se de que a configuração na aba "GitHub Tradicional" foi concluída e salva.
+2. Clique no botão de **Configurações** no rodapé da Galeria.
+3. Clique no botão **Criar código de Galeria**. O botão mudará de cor indicando que o código foi copiado para a área de transferência.
+4. Cole e envie o código `AISP::...` para os membros da sua equipe.
+
+---
+
+## Importar um código de equipe
+
+Se você recebeu um código da sua equipe, você precisa conectá-lo a um Workspace limpo.
+
+Para importar um código:
+1. Na Galeria, clique no menu de rodapé e selecione **+ Novo Workspace**.
+2. Abra as **Configurações**.
+3. Selecione a aba **Código de Galeria** (na parte superior do painel).
+4. Cole o texto completo na caixa de texto.
 5. Clique em **Salvar Configuração**.
-
-A extensão irá decodificar as credenciais, realizar uma validação de segurança com a API do GitHub e, se estiver tudo correto, conectará seu Workspace.
-
-**Último Passo:** Após conectar com sucesso, não esqueça de voltar à tela inicial da Galeria e clicar no botão **Sincronizar (Nuvem para o PC)** no rodapé para baixar os prompts da equipe para a sua máquina!
-
----
-
-## 🔄 Finalizando a Jornada
-
-Com isso, você tem o poder completo da Engenharia de Prompts e de Colaboração diretamente dentro da interface oficial do Google.
-
-Explore, faça iterações, marque 5 estrelas nas suas melhores versões e eleve seu fluxo de trabalho de IA para o próximo nível. 
-
-**Bem-vindo ao AI Studio Superpowers!** 🚀
+6. Após a conexão bem-sucedida, feche as configurações e clique no botão **Sincronizar (Seta para baixo)** no rodapé para baixar os dados da equipe para sua máquina local.

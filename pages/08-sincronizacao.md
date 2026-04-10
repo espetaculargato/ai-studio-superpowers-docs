@@ -1,59 +1,50 @@
-# ☁️ Sincronização com GitHub (Nuvem)
+# Sincronizar com o GitHub
 
-Todos os Prompts, Históricos e Anotações criados no **AI Studio Superpowers** são salvos de forma ultrarrápida no banco de dados local do seu navegador. 
+Este documento explica como vincular seu Workspace a um repositório na nuvem para realizar backups e acessos remotos.
 
-Porém, para garantir que você não perca seu trabalho ao trocar de máquina (ou ao limpar o cache do Chrome), nós integramos a extensão diretamente ao **GitHub Gist**.
+Após ler este guia, você será capaz de:
+* Criar credenciais no GitHub.
+* Configurar o armazenamento na extensão.
+* Executar sincronizações manuais (Push e Pull).
+
+A extensão utiliza o **GitHub Gist** como infraestrutura de nuvem. Seus dados permanecem privados no seu repositório, sem passar por servidores de terceiros.
 
 ---
 
-## 🔑 Por que usar o GitHub Gist?
-O GitHub Gist é um serviço gratuito da Microsoft/GitHub ideal para guardar pequenos blocos de texto ou arquivos JSON estruturados.
-Ao vincular seu Workspace a um Gist, seus dados permanecem **100% privados** e sob o seu controle absoluto. A extensão não possui servidores próprios, nós não temos acesso aos seus prompts.
+## Obter credenciais do GitHub
 
----
+Você precisa de um Gist (para armazenar o arquivo) e de um Token (para autorizar a escrita).
 
-## ⚙️ Passo a Passo: Configuração Inicial
+**Passo A: Criar o Gist**
+1. Acesse [gist.github.com](https://gist.github.com/).
+2. Escreva `{}` no campo de conteúdo.
+3. Clique em **Create secret gist**.
+4. Copie o ID contido no final da URL gerada.
 
-Para ativar a sincronização em um Workspace, você precisa de duas informações do GitHub: um **Token de Acesso** e o **ID de um Gist**.
-
-### 1. Criando o Gist (Banco de Dados)
-1. Acesse [gist.github.com](https://gist.github.com/) e faça login.
-2. Crie um Gist **Secreto** (Secret Gist) com qualquer nome (ex: `meus_prompts_aistudio.json`). Escreva um `{}` vazio dentro dele apenas para criar o arquivo.
-3. Clique em "Create secret gist".
-4. Copie o **ID** que aparecer na URL (ex: `https://gist.github.com/SeuUsuario/`**`d43ec0b05b...`**).
-
-### 2. Criando o Token de Acesso (Chave de API)
-1. No GitHub, vá em **Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
+**Passo B: Gerar o Token de Acesso**
+1. No GitHub, acesse **Settings > Developer settings > Personal access tokens > Tokens (classic)**.
 2. Clique em **Generate new token (classic)**.
-3. Dê um nome (ex: `AI Studio Sync`) e defina a Expiração (Recomendamos *No expiration* para não precisar refazer isso).
-4. Em "Select scopes", marque a caixinha **`gist`** (A extensão precisa apenas desta permissão, nada mais).
-5. Clique em Generate e **copie o Token** (ele começa com `ghp_...`).
-
-### 3. Conectando na Extensão
-1. No AI Studio, abra a Galeria.
-2. Certifique-se de que está no Workspace correto.
-3. No rodapé, clique no botão de **Configurações** (Ícone: `settings`).
-4. Na aba "GitHub Tradicional", cole o **Gist ID** e o **GitHub Token**.
-5. Clique em **Salvar Configuração**. A extensão validará as credenciais imediatamente.
+3. Na seção "Select scopes", marque a opção `gist`.
+4. Clique em **Generate token** e copie a chave resultante (inicia com `ghp_`).
 
 ---
 
-## 🔄 Enviando e Recebendo Dados (Push & Pull)
+## Configurar a extensão
 
-Uma vez configurado, o status no rodapé mudará de *Configurar* para **Ativo** (verde). 
+Cada Workspace exige sua própria configuração de nuvem. Recomenda-se utilizar o mesmo Token, mas um Gist ID distinto para cada Workspace.
 
-A sincronização **não é automática**. Você tem controle manual para evitar perda acidental de dados:
-
-*   ☁️⬇️ **Sincronizar (Puxar da Nuvem):** Baixa a versão que está salva no GitHub. **Atenção:** Isso substituirá os arquivos locais daquele Workspace. Use essa opção quando acessar de um novo computador.
-*   ☁️⬆️ **Enviar (Salvar na Nuvem):** Sobe todos os prompts e notas locais do Workspace atual para o seu GitHub. Faça isso ao fim do seu dia de trabalho para manter um backup seguro.
-
----
-
-## 🛡️ Status Isolado por Workspace
-
-Lembre-se da [arquitetura de Workspaces](./05-workspaces.md):
-Cada Workspace exige sua própria configuração de Nuvem. Você pode usar o mesmo Token para todos, mas é obrigatório que cada Workspace tenha um **Gist ID diferente**, caso contrário, os projetos sobrescreverão os dados uns dos outros no Github.
+Para vincular o Workspace atual:
+1. Abra a Galeria e clique no botão de **Configurações**.
+2. Cole o **Gist ID** e o **GitHub Token** nos respectivos campos.
+3. Clique em **Salvar Configuração**. A extensão validará as credenciais.
 
 ---
 
-> **Trabalho em Equipe:** Sabia que você pode compartilhar esse Workspace com amigos sem ter que mandar seu Token de acesso privado para eles? Descubra a tecnologia de segurança no [Compartilhamento (Código AISP)](./09-codigo-galeria.md).
+## Executar sincronização (Push & Pull)
+
+A sincronização de dados ocorre exclusivamente de forma manual. 
+
+Para sincronizar, utilize os botões com ícones de nuvem localizados no rodapé da Galeria:
+
+*   **Sincronizar (Seta para baixo):** Baixa o arquivo do GitHub e substitui os dados do Workspace local atual. Utilize ao acessar a extensão a partir de um novo computador.
+*   **Enviar (Seta para cima):** Salva os dados do Workspace local atual no GitHub, sobrescrevendo a versão da nuvem. Utilize para gerar backups após uma sessão de trabalho.

@@ -1,55 +1,45 @@
-# 🏷️ Etiquetas (Tags) e Filtros
+# Etiquetas (Tags) e Filtros
 
-Com dezenas de Prompts e Notas acumulados, a busca por texto pode não ser suficiente. O sistema de Etiquetas (Tags) do **AI Studio Superpowers** funciona como a espinha dorsal da sua organização diária.
+Este documento descreve como classificar e localizar itens usando o sistema de etiquetas.
 
----
-
-## 🔍 A Barra de Filtros (Toolbar)
-
-Na parte superior da Galeria, ao lado do campo de busca textual, você encontrará a **Barra de Filtros**. 
-Esta barra exibe dinamicamente todas as etiquetas únicas usadas no seu Workspace atual.
-
-*   **Filtro Combinado:** Clique em uma ou mais etiquetas para ativar os filtros. O painel da Galeria mostrará apenas os itens que possuam **todas** as etiquetas selecionadas.
-*   **Integração com a Busca:** O filtro por etiqueta trabalha em conjunto com a busca por texto. Você pode filtrar pela tag `#Desenvolvimento` e digitar "Python" no campo de busca para uma filtragem dupla.
+Após ler este guia, você será capaz de:
+* Filtrar a Galeria usando etiquetas.
+* Adicionar etiquetas a Prompts e Notas.
+* Renomear e excluir etiquetas globalmente.
 
 ---
 
-## ✏️ Adicionando Etiquetas (Editor Inline)
+## Filtrar conteúdo
 
-Você adiciona etiquetas aos seus itens diretamente pela tela de edição (ao criar ou editar um Prompt/Nota).
+A Barra de Filtros, localizada no topo da Galeria, exibe todas as etiquetas utilizadas no Workspace atual.
 
-1.  Abaixo do título, clique no botão **Adicionar Etiqueta** (`+`).
-2.  Comece a digitar. Um menu suspenso será aberto mostrando:
-    *   **Sugestões:** Etiquetas existentes que contêm as letras digitadas.
-    *   **Criar Nova:** A opção para registrar a nova etiqueta no seu banco de dados.
-3.  Você pode confirmar a seleção pressionando `Enter` ou clicando na sugestão. O menu é desenhado para não interromper seu fluxo de digitação.
-
----
-
-## 🪄 Emojis Mágicos nas Etiquetas
-
-Assim como nos títulos dos cards, as etiquetas possuem um sistema de formatação visual inteligente.
-*   Se a sua etiqueta **começar com um Emoji**, a extensão ocultará o ícone nativo de "Tag" (`#`) e usará o seu Emoji como o ícone oficial daquele filtro.
-*   *Exemplo:* Uma tag escrita como `⚙️ Backend` aparecerá na barra de filtros com a engrenagem no lugar do ícone padrão, poupando espaço visual e facilitando a identificação rápida.
+Para aplicar filtros:
+* Clique em uma etiqueta na barra superior. A Galeria exibirá apenas os cards que contêm aquela tag.
+* Clique em múltiplas etiquetas para restringir a busca. O item deve conter **todas** as etiquetas selecionadas para aparecer.
+* Clique em uma etiqueta diretamente no rodapé de um card para ativar o filtro automaticamente.
+* Você pode combinar os filtros de etiqueta com termos digitados no campo de busca textual.
 
 ---
 
-## 🌐 Gerenciamento Global de Etiquetas
+## Adicionar etiquetas
 
-O que fazer se você digitou uma tag errada em 20 prompts diferentes? Nós criamos o **Menu de Contexto Global** para resolver isso.
+As etiquetas são atribuídas individualmente em cada item durante a edição.
 
-Vá até a barra de filtros principal (no topo da Galeria) e clique com o **botão direito** sobre qualquer etiqueta:
+Para adicionar uma etiqueta:
+1. Na tela de edição de um Prompt ou Nota, clique no botão **+** abaixo do campo de título.
+2. Digite o nome da etiqueta. Um menu exibirá sugestões baseadas no seu histórico.
+3. Clique na sugestão ou pressione <kbd>Enter</kbd> para confirmar a criação de uma nova tag.
 
-1.  **Renomear Etiqueta (`edit`):** Abre um painel de inserção de texto. O novo nome que você digitar substituirá a etiqueta antiga em **todos** os Prompts e Notas daquele Workspace automaticamente.
-2.  **Excluir de Todos (`delete`):** Remove a etiqueta permanentemente de todos os itens associados. (Isso **não** exclui os Prompts ou Notas, apenas apaga a etiqueta deles).
-
----
-
-## ⚡ Filtro Rápido (Quick Filter)
-
-Quando você estiver visualizando a Galeria nos layouts de "Card" ou "Compacto", verá as etiquetas atribuídas a cada item na parte inferior do cartão.
-*   **Atalho:** Clicar diretamente em uma etiqueta no rodapé de um card ativará imediatamente o filtro principal da Galeria para aquela tag específica, sem precisar rolar a página até a barra superior.
+> 💡 **Dica de Formatação:** Se o texto da etiqueta iniciar com um Emoji, a barra de filtros substituirá o ícone padrão de hashtag (`#`) por esse Emoji.
 
 ---
 
-> **Extraindo o Trabalho:** Com tudo organizado, aprenda a salvar o resultado das suas conversas com a IA lendo a sessão [Exportador de Conversas](./07-exportador.md).
+## Gerenciar etiquetas globalmente
+
+Você pode modificar uma etiqueta em dezenas de itens simultaneamente utilizando o Menu de Contexto Global.
+
+Para renomear ou remover uma etiqueta em lote:
+1. Na Barra de Filtros (topo da Galeria), clique com o **botão direito** sobre a etiqueta que deseja alterar.
+2. Escolha uma das opções:
+   * **Renomear Etiqueta:** Digite o novo nome. A extensão substituirá a etiqueta antiga pela nova em todos os arquivos associados.
+   * **Excluir de Todos:** Remove a etiqueta de todos os Prompts e Notas, mas mantém os arquivos intactos.
